@@ -7,22 +7,12 @@ interface AboutModelStageProps {
 }
 
 const FRAME_COUNT = 120;
-
-/*
- * Slide 1  -> frame 0   -> model bên trái
- * Slide 2  -> frame 60  -> model ở giữa
- * Slide 3  -> frame 119 -> model bên phải
- */
 export const TARGET_FRAMES: readonly number[] = [0, 68, 119];
 
-/*
- * Mỗi frame vẫn chạy tuần tự, nhưng delay giảm dần:
- * bắt đầu chậm -> tăng tốc ở giữa -> hãm nhẹ gần frame đích.
- */
-const FRAME_DELAY_START_MS = 15;
+const FRAME_DELAY_START_MS = 16;
 const FRAME_DELAY_FAST_MS = 8;
-const FRAME_DELAY_END_MS = 12;
-const END_SLOWDOWN_PORTION = 0.12;
+const FRAME_DELAY_END_MS = 13;
+const END_SLOWDOWN_PORTION = 0.14;
 
 const MODEL_LEFT_VW = -20;
 const MODEL_CENTER_VW = 0;
@@ -30,8 +20,6 @@ const MODEL_RIGHT_VW = 20;
 
 const framePath = (index: number) =>
   `/models/avatar/frame_${String(index).padStart(6, "0")}.webp`;
-
-const AVATAR_SCALE = 1.15;
 
 function clampFrame(frame: number) {
   return Math.min(FRAME_COUNT - 1, Math.max(0, Math.round(frame)));
@@ -49,21 +37,14 @@ function easeOutCubic(progress: number) {
   return 1 - Math.pow(1 - progress, 3);
 }
 
-/*
- * Tính delay cho TỪNG frame, không skip frame:
- * - đầu chuyển động chậm
- * - sau đó tăng tốc rõ
- * - khoảng 12% cuối hãm nhẹ để dừng không gắt
- */
 function getFrameDelay(completedSteps: number, totalSteps: number) {
-  if (totalSteps <= 1) {
-    return FRAME_DELAY_FAST_MS;
-  }
+  if (totalSteps <= 1) return FRAME_DELAY_FAST_MS;
 
   const progress = completedSteps / totalSteps;
 
   if (progress < 1 - END_SLOWDOWN_PORTION) {
-    const accelerationProgress = progress / (1 - END_SLOWDOWN_PORTION);
+    const accelerationProgress =
+      progress / (1 - END_SLOWDOWN_PORTION);
 
     return lerp(
       FRAME_DELAY_START_MS,
@@ -73,7 +54,8 @@ function getFrameDelay(completedSteps: number, totalSteps: number) {
   }
 
   const slowdownProgress =
-    (progress - (1 - END_SLOWDOWN_PORTION)) / END_SLOWDOWN_PORTION;
+    (progress - (1 - END_SLOWDOWN_PORTION)) /
+    END_SLOWDOWN_PORTION;
 
   return lerp(
     FRAME_DELAY_FAST_MS,
@@ -82,28 +64,22 @@ function getFrameDelay(completedSteps: number, totalSteps: number) {
   );
 }
 
-/*
- * Vị trí ngang phụ thuộc trực tiếp vào frame hiện tại.
- *
- * Frame 0   = trái
- * Frame 60  = giữa
- * Frame 119 = phải
- *
- * Khi chạy ngược, vị trí cũng tự chạy ngược theo từng frame.
- * Không có animation vị trí riêng nên model luôn vừa xoay vừa di chuyển.
- */
 function getModelXFromFrame(frame: number) {
   const safeFrame = clampFrame(frame);
 
   if (safeFrame <= 60) {
-    const progress = safeFrame / 60;
-
-    return lerp(MODEL_LEFT_VW, MODEL_CENTER_VW, progress);
+    return lerp(
+      MODEL_LEFT_VW,
+      MODEL_CENTER_VW,
+      safeFrame / 60,
+    );
   }
 
-  const progress = (safeFrame - 60) / (119 - 60);
-
-  return lerp(MODEL_CENTER_VW, MODEL_RIGHT_VW, progress);
+  return lerp(
+    MODEL_CENTER_VW,
+    MODEL_RIGHT_VW,
+    (safeFrame - 60) / 59,
+  );
 }
 
 export default function AboutModelStage({
@@ -111,31 +87,152 @@ export default function AboutModelStage({
   onFrameChange,
   onAnimationStateChange,
 }: AboutModelStageProps) {
-  const initialFrame = TARGET_FRAMES[0] ?? 0;
-
-  const [currentFrame, setCurrentFrame] = useState<number>(initialFrame);
-
-  const currentFrameRef = useRef<number>(initialFrame);
-
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const currentFrameRef = useRef(TARGET_FRAMES[0] ?? 0);
   const timerRef = useRef<number | null>(null);
 
-  const loadedRef = useRef(false);
+  const onFrameChangeRef = useRef(onFrameChange);
+  const onAnimationStateChangeRef = useRef(
+    onAnimationStateChange,
+  );
+
+  const [currentFrame, setCurrentFrame] = useState(
+    TARGET_FRAMES[0] ?? 0,
+  );
+  const [isMobile, setIsMobile] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    if (loadedRef.current) {
-      return;
+    onFrameChangeRef.current = onFrameChange;
+  }, [onFrameChange]);
+
+  useEffect(() => {
+    onAnimationStateChangeRef.current =
+      onAnimationStateChange;
+  }, [onAnimationStateChange]);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 1023px)");
+
+    const update = () => setIsMobile(media.matches);
+
+    update();
+    media.addEventListener("change", update);
+
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  const drawFrame = (frame: number) => {
+    const canvas = canvasRef.current;
+    const image = imagesRef.current[frame];
+
+    if (!canvas || !image || !image.complete) return;
+
+    const context = canvas.getContext("2d");
+    if (!context) return;
+
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+    const displayWidth = canvas.clientWidth;
+    const displayHeight = canvas.clientHeight;
+
+    const nextWidth = Math.max(1, Math.round(displayWidth * pixelRatio));
+    const nextHeight = Math.max(1, Math.round(displayHeight * pixelRatio));
+
+    if (
+      canvas.width !== nextWidth ||
+      canvas.height !== nextHeight
+    ) {
+      canvas.width = nextWidth;
+      canvas.height = nextHeight;
     }
 
-    loadedRef.current = true;
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    const imageRatio =
+      image.naturalWidth / Math.max(1, image.naturalHeight);
+    const canvasRatio =
+      canvas.width / Math.max(1, canvas.height);
+
+    let drawWidth = canvas.width;
+    let drawHeight = canvas.height;
+
+    if (imageRatio > canvasRatio) {
+      drawHeight = canvas.width / imageRatio;
+    } else {
+      drawWidth = canvas.height * imageRatio;
+    }
+
+    const scale = isMobile ? 1.12 : 1.15;
+    drawWidth *= scale;
+    drawHeight *= scale;
+
+    const x = (canvas.width - drawWidth) / 2;
+    const y = canvas.height - drawHeight;
+
+    context.drawImage(
+      image,
+      x,
+      y,
+      drawWidth,
+      drawHeight,
+    );
+  };
+
+  useEffect(() => {
+    let cancelled = false;
+    const loadedImages: HTMLImageElement[] = [];
+    let loadedCount = 0;
+
+    const markLoaded = () => {
+      loadedCount += 1;
+
+      if (
+        !cancelled &&
+        loadedCount === FRAME_COUNT
+      ) {
+        imagesRef.current = loadedImages;
+        setIsReady(true);
+        drawFrame(currentFrameRef.current);
+      }
+    };
 
     for (let index = 0; index < FRAME_COUNT; index += 1) {
       const image = new Image();
+      image.decoding = "async";
       image.src = framePath(index);
+      image.onload = markLoaded;
+      image.onerror = markLoaded;
+      loadedImages[index] = image;
     }
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   useEffect(() => {
-    const targetFrame = clampFrame(TARGET_FRAMES[activeSlide] ?? initialFrame);
+    if (!isReady) return;
+
+    drawFrame(currentFrameRef.current);
+
+    const onResize = () => {
+      drawFrame(currentFrameRef.current);
+    };
+
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, [isReady, isMobile]);
+
+  useEffect(() => {
+    if (!isReady) return;
+
+    const targetFrame = clampFrame(
+      TARGET_FRAMES[activeSlide] ?? 0,
+    );
 
     if (timerRef.current !== null) {
       window.clearTimeout(timerRef.current);
@@ -143,30 +240,26 @@ export default function AboutModelStage({
     }
 
     if (currentFrameRef.current === targetFrame) {
-      onFrameChange?.(targetFrame);
-      onAnimationStateChange?.(false);
+      drawFrame(targetFrame);
+      onFrameChangeRef.current?.(targetFrame);
+      onAnimationStateChangeRef.current?.(false);
       return;
     }
 
-    onAnimationStateChange?.(true);
+    onAnimationStateChangeRef.current?.(true);
 
-    const totalSteps = Math.abs(targetFrame - currentFrameRef.current);
+    const totalSteps = Math.abs(
+      targetFrame - currentFrameRef.current,
+    );
 
     let completedSteps = 0;
 
-    /*
-     * Chạy tuần tự đúng từng frame:
-     * 0, 1, 2 ... 60 ... 119
-     *
-     * Khi quay ngược:
-     * 119, 118, 117 ... 60 ... 1, 0
-     */
     const playNextFrame = () => {
       const current = currentFrameRef.current;
 
       if (current === targetFrame) {
         timerRef.current = null;
-        onAnimationStateChange?.(false);
+        onAnimationStateChangeRef.current?.(false);
         return;
       }
 
@@ -175,22 +268,27 @@ export default function AboutModelStage({
 
       currentFrameRef.current = nextFrame;
       setCurrentFrame(nextFrame);
-      onFrameChange?.(nextFrame);
+      drawFrame(nextFrame);
+      onFrameChangeRef.current?.(nextFrame);
 
       if (nextFrame === targetFrame) {
         timerRef.current = null;
-        onAnimationStateChange?.(false);
+        onAnimationStateChangeRef.current?.(false);
         return;
       }
 
       completedSteps += 1;
 
-      const nextDelay = getFrameDelay(completedSteps, totalSteps);
-
-      timerRef.current = window.setTimeout(playNextFrame, nextDelay);
+      timerRef.current = window.setTimeout(
+        playNextFrame,
+        getFrameDelay(completedSteps, totalSteps),
+      );
     };
 
-    timerRef.current = window.setTimeout(playNextFrame, FRAME_DELAY_START_MS);
+    timerRef.current = window.setTimeout(
+      playNextFrame,
+      FRAME_DELAY_START_MS,
+    );
 
     return () => {
       if (timerRef.current !== null) {
@@ -198,9 +296,11 @@ export default function AboutModelStage({
         timerRef.current = null;
       }
     };
-  }, [activeSlide, initialFrame, onAnimationStateChange, onFrameChange]);
+  }, [activeSlide, isReady]);
 
-  const modelX = getModelXFromFrame(currentFrame);
+  const modelX = isMobile
+    ? 0
+    : getModelXFromFrame(currentFrame);
 
   return (
     <div
@@ -213,15 +313,12 @@ export default function AboutModelStage({
         overflow-hidden
       "
     >
-      {/*
-        Không dùng transition CSS hay Framer Motion cho vị trí.
-        Mỗi frame tự quyết định vị trí ngang tương ứng.
-      */}
       <div
         className="
           absolute
-          bottom-[-1vh]
+          bottom-[0.75rem]
           left-1/2
+          lg:bottom-[-1vh]
         "
         style={{
           transform: `translateX(calc(-50% + ${modelX}vw))`,
@@ -231,12 +328,12 @@ export default function AboutModelStage({
         <div
           className="
             relative
-            h-[68vh]
-            min-h-[460px]
-            w-[92vw]
-            max-w-[560px]
-            sm:h-[74vh]
-            sm:max-w-[620px]
+            h-[62dvh]
+            min-h-[400px]
+            w-[108vw]
+            max-w-[700px]
+            sm:h-[66dvh]
+            sm:max-w-[760px]
             lg:h-[88vh]
             lg:min-h-[620px]
             lg:w-[48vw]
@@ -244,28 +341,27 @@ export default function AboutModelStage({
           "
           style={{
             WebkitMaskImage:
-              "linear-gradient(to bottom, black 0%, black 72%, rgba(0,0,0,0.92) 80%, rgba(0,0,0,0.58) 89%, rgba(0,0,0,0.18) 96%, transparent 100%)",
+              "linear-gradient(to bottom, black 0%, black 74%, rgba(0,0,0,0.92) 82%, rgba(0,0,0,0.55) 91%, rgba(0,0,0,0.12) 97%, transparent 100%)",
             maskImage:
-              "linear-gradient(to bottom, black 0%, black 72%, rgba(0,0,0,0.92) 80%, rgba(0,0,0,0.58) 89%, rgba(0,0,0,0.18) 96%, transparent 100%)",
+              "linear-gradient(to bottom, black 0%, black 74%, rgba(0,0,0,0.92) 82%, rgba(0,0,0,0.55) 91%, rgba(0,0,0,0.12) 97%, transparent 100%)",
           }}
         >
-          <img
-            src={framePath(currentFrame)}
-            alt=""
-            draggable={false}
+          <canvas
+            ref={canvasRef}
             className="
-              absolute
-              inset-0
+              block
               h-full
               w-full
-              select-none
-              object-contain
             "
-            style={{
-              transform: `scale(${AVATAR_SCALE})`,
-              transformOrigin: "bottom center",
-            }}
           />
+
+          {!isReady && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-[9px] font-bold uppercase tracking-[0.28em] text-[#E8E9EB]/30">
+                Loading model
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </div>

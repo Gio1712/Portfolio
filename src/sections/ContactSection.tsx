@@ -118,7 +118,9 @@ export default function ContactSection() {
               </p>
 
               <motion.a
-                href="mailto:buiminhdat1712@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=buiminhdat1712@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{
                   x: 8,
                 }}
