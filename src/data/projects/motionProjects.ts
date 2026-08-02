@@ -1,0 +1,248 @@
+import type { ProjectCategory } from "../projectCategories";
+
+export const MOTION_CATEGORY: ProjectCategory = {
+  id: "motion-graphics",
+  title: "Motion Graphics",
+  subtitle:
+    "A collection of motion design projects focused on product communication, brand storytelling and dynamic visual experiences.",
+  projects: [
+    {
+      id: "pay-with-crypto",
+      title: "Pay with Crypto",
+      type: "Fintech Motion Campaign",
+      year: "2025",
+      client: "9Proxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/pay-with-crypto/cover.webp",
+      description:
+        "A promotional motion graphic presenting crypto payment benefits through bold typography, digital interface elements and fast-paced transitions.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/pay-with-crypto.mp4",
+        src: "/projects/motiongraphic/source/pay-with-crypto.mp4",
+        ratio: "1:1",
+      },
+    },
+    {
+      id: "white-label-proxy",
+      title: "White Label Proxy",
+      type: "Product Motion Campaign",
+      year: "2025",
+      client: "9Proxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/white-label-proxy/cover.webp",
+      description:
+        "A product-focused animation introducing white-label proxy solutions with clean information hierarchy, polished transitions and a modern technology aesthetic.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/white-label-proxy.mp4",
+        src: "/projects/motiongraphic/source/white-label-proxy.mp4",
+        ratio: "1:1",
+      },
+    },
+    {
+      id: "christmas-campaign",
+      title: "Christmas Campaign",
+      type: "Seasonal Motion Campaign",
+      year: "2025",
+      client: "9Proxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/christmas-campaign/cover.webp",
+      description:
+        "A festive seasonal animation combining Christmas imagery, branded motion and promotional messaging for a holiday campaign.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/christmas-campaign.mp4",
+        src: "https://pub-063334e5ec6a49e8ac1371f715489bb1.r2.dev/christmas-campaign.mp4",
+        ratio: "1:1",
+      },
+    },
+    {
+      id: "crawling-heavy-sites",
+      title: "Crawling Heavy Sites",
+      type: "Product Motion Campaign",
+      year: "2025",
+      client: "9Proxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/crawling-heavy-sites/cover.webp",
+      description:
+        "A performance-led motion graphic communicating fast and reliable web crawling through dynamic type, technical visuals and energetic pacing.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/crawling-heavy-sites.mp4",
+        src: "/projects/motiongraphic/source/crawling-heavy-sites.mp4",
+        ratio: "1:1",
+      },
+    },
+    {
+      id: "smooth-proxy-workflow",
+      title: "Smooth Proxy Workflow",
+      type: "Product Motion Campaign",
+      year: "2025",
+      client: "BeeProxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/smooth-proxy-workflow/cover.webp",
+      description:
+        "A clean product animation demonstrating a smooth proxy workflow through fluid transitions, interface-driven visuals and concise storytelling.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/smooth-proxy-workflow.mp4",
+        src: "/projects/motiongraphic/source/smooth-proxy-workflow.mp4",
+        ratio: "1:1",
+      },
+    },
+    {
+      id: "scraping-without-limits",
+      title: "Scraping Without Limits",
+      type: "Product Motion Campaign",
+      year: "2025",
+      client: "BeeProxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/scraping-without-limits/cover.webp",
+      description:
+        "A technology-focused motion piece highlighting scalable web scraping through bold typography, energetic movement and clear product communication.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/scraping-without-limits.mp4",
+        src: "/projects/motiongraphic/source/scraping-without-limits.mp4",
+        ratio: "1:1",
+      },
+    },
+    {
+      id: "proxy-for-everyone",
+      title: "Proxy for Everyone",
+      type: "Brand Motion Campaign",
+      year: "2025",
+      client: "BeeProxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/proxy-for-everyone/cover.webp",
+      description:
+        "A brand awareness animation positioning BeeProxy as an accessible proxy solution for different users, workflows and levels of experience.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/proxy-for-everyone.mp4",
+        src: "/projects/motiongraphic/source/proxy-for-everyone.mp4",
+        ratio: "1:1",
+      },
+    },
+    {
+      id: "the-difference",
+      title: "The Difference",
+      type: "Brand Motion Campaign",
+      year: "2025",
+      client: "BeeProxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/the-difference/cover.webp",
+      description:
+        "A comparison-led brand animation emphasizing BeeProxy’s key advantages through sharp transitions, concise messaging and a confident visual rhythm.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/the-difference.mp4",
+        src: "/projects/motiongraphic/source/the-difference.mp4",
+        ratio: "1:1",
+      },
+    },
+    {
+      id: "cooldown-day-one",
+      title: "Cooldown: Day One",
+      type: "Experimental Motion",
+      year: "2025",
+      client: "9Proxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/cooldown-day-one/cover.webp",
+      description:
+        "An experimental motion piece exploring rhythm, atmosphere and cinematic pacing through layered transitions and contemporary visual design.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/cooldown-day-one.mp4",
+        src: "https://pub-063334e5ec6a49e8ac1371f715489bb1.r2.dev/cooldown-day-one.mp4",
+        ratio: "1:1",
+      },
+    },
+    {
+      id: "customize-proxy-settings",
+      title: "Customize Proxy Settings",
+      type: "Experimental Motion",
+      year: "2025",
+      client: "9Proxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail:
+        "/projects/motion/customize-proxy-settings-to-prevent-repetition/cover.webp",
+      description:
+        "The vimeo video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
+      groups: [],
+      motion: {
+        preview:
+          "/projects/motiongraphic/preview/customize-proxy-settings-to-prevent-repetition.mp4",
+        src: "https://pub-063334e5ec6a49e8ac1371f715489bb1.r2.dev/customize-proxy-settings-to-prevent-repetition.mp4",
+        ratio: "16:9",
+      },
+    },
+    {
+      id: "vivaldi-browser-proxy-settings",
+      title: "Vivaldi Browser Proxy Settings",
+      type: "Experimental Motion",
+      year: "2025",
+      client: "9Proxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/vivaldi-settings/cover.webp",
+      description:
+        "The vimeo video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/vivaldi-settings.mp4",
+        src: "https://pub-063334e5ec6a49e8ac1371f715489bb1.r2.dev/vivaldi-settings.mp4",
+        ratio: "16:9",
+      },
+    },
+    {
+      id: "struggling-account-9Proxy",
+      title: "Struggling with Your Account?",
+      type: "Experimental Motion",
+      year: "2025",
+      client: "9Proxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail:
+        "/projects/motion/account-experiencing-issues-9Proxy/cover.webp",
+      description:
+        "The vimeo video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
+      groups: [],
+      motion: {
+        preview:
+          "/projects/motiongraphic/preview/account-experiencing-issues-9Proxy.mp4",
+        src: "https://pub-063334e5ec6a49e8ac1371f715489bb1.r2.dev/account-experiencing-issues-9Proxy.mp4",
+        ratio: "16:9",
+      },
+    },
+    {
+      id: "google-chrome-settings",
+      title: "Google Chrome Proxy Settings",
+      type: "Experimental Motion",
+      year: "2025",
+      client: "9Proxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/google-settings/cover.webp",
+      description:
+        "The vimeo video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/google-settings.mp4",
+        src: "https://pub-063334e5ec6a49e8ac1371f715489bb1.r2.dev/google-settings.mp4",
+        ratio: "16:9",
+      },
+    },
+  ],
+};
