@@ -97,6 +97,24 @@ export const MOTION_CATEGORY: ProjectCategory = {
       },
     },
     {
+      id: "lunar-new-year-coupon",
+      title: "Lunar New Year Coupon",
+      type: "Product Motion Campaign",
+      year: "2025",
+      client: "9Proxy",
+      role: "Motion Designer",
+      tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+      thumbnail: "/projects/motion/lunar-new-year-coupon/cover.webp",
+      description:
+        "A promotional motion graphics project created for a Lunar New Year campaign, combining cinematic motion design, premium typography, elegant coupon animations, and festive visual storytelling. The project focuses on delivering a luxurious holiday atmosphere through refined transitions, dynamic composition, and modern red-and-gold aesthetics while highlighting promotional offers in a clean and engaging way.",
+      groups: [],
+      motion: {
+        preview: "/projects/motiongraphic/preview/lunar-new-year-coupon.mp4",
+        src: "/projects/motiongraphic/source/lunar-new-year-coupon.mp4",
+        ratio: "1:1",
+      },
+    },
+    {
       id: "scraping-without-limits",
       title: "Scraping Without Limits",
       type: "Product Motion Campaign",

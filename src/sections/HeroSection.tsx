@@ -11,8 +11,33 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
   return (
     <section
       id="home"
-      className="relative flex h-screen flex-col overflow-x-clip"
+      className="relative flex h-[100dvh] min-h-[640px] flex-col overflow-x-clip"
     >
+      <button
+        onClick={() => onNavigate("home")}
+        className="
+          absolute
+          left-10
+          top-6
+          z-30
+          transition-transform
+          duration-300
+          hover:scale-110
+        "
+      >
+        <div
+          className="w-14 h-14 lg:w-16 lg:h-16"
+          style={{
+            background:
+              "linear-gradient(180deg, #646973 0%, #bbccd7 100%)",
+            WebkitMask:
+              "url('/logo/Logo.svg') center / contain no-repeat",
+            mask:
+              "url('/logo/Logo.svg') center / contain no-repeat",
+          }}
+        />
+      </button>
+
       {/* Background */}
       <div className="absolute inset-0">
         <Starfield />
@@ -49,7 +74,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           </div>
 
           {/* Avatar — mobile */}
-          <div className="flex flex-1 items-end justify-center md:hidden">
+          <div className="relative flex min-h-0 flex-1 items-end justify-center pb-[clamp(2.75rem,7dvh,4.75rem)] md:hidden">
             <div className="relative">
               <div
                 aria-hidden="true"
@@ -81,7 +106,8 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
                 className="
                   relative
                   h-full
-                  max-h-[38vh]
+                  h-[45dvh]
+                  max-h-[520px]
                   w-auto
                   object-contain
                   [mask-image:linear-gradient(to_bottom,black_0%,black_82%,rgba(0,0,0,0.72)_91%,transparent_100%)]

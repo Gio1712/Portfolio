@@ -18,13 +18,20 @@ body,
 }
 
 .hero-heading {
-  background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+  background:
+    linear-gradient(180deg,
+      #646973 0%,
+      #9ea8b4 28%,
+      #d7e2ea 52%,
+      #bcc9d3 74%,
+      #646973 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -39,6 +46,7 @@ body,
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -48,6 +56,7 @@ body,
   from {
     transform: translateX(-50%);
   }
+
   to {
     transform: translateX(0);
   }

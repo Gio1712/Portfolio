@@ -28,16 +28,17 @@ export default function ContactSection() {
       id="contact"
       className="
         relative
-        min-h-screen
+        flex
+        min-h-[100dvh]
         overflow-hidden
         bg-[#080808]
         px-5
-        py-24
+        py-8
         text-[#E8E9EB]
         sm:px-8
-        sm:py-28
+        sm:py-10
         md:px-10
-        md:py-32
+        md:py-12
       "
     >
       {/* Background */}
@@ -76,7 +77,7 @@ export default function ContactSection() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[72vh] max-w-[1600px] flex-col justify-between">
+      <div className="relative z-10 mx-auto grid min-h-0 w-full max-w-[1600px] flex-1 grid-rows-[auto_1fr_auto] gap-5">
         {/* Header */}
         <FadeIn delay={0} y={28}>
           <div>
@@ -86,11 +87,18 @@ export default function ContactSection() {
               </span>
 
               <div className="h-px flex-1 bg-gradient-to-r from-[#E8E9EB]/25 to-transparent" />
+
+              <a href="#home" className="hover:scale-110 transition">
+                <img
+                  src="/logo/White.svg"
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+              </a>
             </div>
 
             <h2
               className="
-                mt-7
+                mt-4 sm:mt-5
                 max-w-[1200px]
                 font-black
                 uppercase
@@ -98,7 +106,7 @@ export default function ContactSection() {
                 text-[#F4F5F6]
               "
               style={{
-                fontSize: "clamp(4rem, 13vw, 12rem)",
+                fontSize: "clamp(3.2rem, 10.5vw, 9rem)",
               }}
             >
               Let&apos;s
@@ -109,7 +117,7 @@ export default function ContactSection() {
         </FadeIn>
 
         {/* Main contact */}
-        <div className="mt-16 grid gap-12 md:grid-cols-[1.3fr_0.7fr] md:items-end">
+        <div className="grid min-h-0 content-center gap-7 md:grid-cols-[1.15fr_0.85fr] md:items-end md:gap-10">
           <FadeIn delay={0.1} y={24}>
             <div>
               <p className="max-w-xl text-base font-light leading-relaxed text-[#E8E9EB]/55 md:text-lg">
@@ -134,7 +142,7 @@ export default function ContactSection() {
                 }}
                 className="
                   group
-                  mt-9
+                  mt-5
                   inline-flex
                   items-center
                   gap-4
@@ -142,8 +150,9 @@ export default function ContactSection() {
                   border
                   border-[#E8E9EB]/20
                   bg-[#E8E9EB]/[0.035]
-                  px-6
-                  py-4
+                  px-4
+                  py-3
+                  sm:px-5
                   text-sm
                   font-bold
                   uppercase
@@ -192,7 +201,7 @@ export default function ContactSection() {
                       justify-between
                       border-b
                       border-[#E8E9EB]/10
-                      py-4
+                      py-2.5 sm:py-3
                     "
                 >
                   <div className="flex items-center gap-4">
@@ -223,7 +232,7 @@ export default function ContactSection() {
         </div>
 
         {/* Footer HUD */}
-        <div className="mt-20 flex flex-col gap-5 border-t border-[#E8E9EB]/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 border-t border-[#E8E9EB]/10 pt-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <div className="relative flex size-8 items-center justify-center">
               <div className="absolute size-7 rounded-full border border-[#E8E9EB]/15" />
