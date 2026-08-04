@@ -81,17 +81,31 @@ export default function ContactSection() {
         {/* Header */}
         <FadeIn delay={0} y={28}>
           <div>
-            <div className="flex items-center gap-4">
+            <div className="flex min-w-0 items-center gap-3 sm:gap-4">
               <span className="shrink-0 text-[10px] font-bold uppercase tracking-[0.34em] text-[#E8E9EB]/35">
                 SYS / CONTACT
               </span>
 
               <div className="h-px flex-1 bg-gradient-to-r from-[#E8E9EB]/25 to-transparent" />
 
-              <a href="#home" className="hover:scale-110 transition">
-                <img
-                  src="/logo/White.svg"
-                  className="w-10 h-10 md:w-12 md:h-12"
+              <a
+                href="#home"
+                aria-label="Back to home"
+                className="
+                  flex shrink-0 items-center justify-center opacity-90
+                  transition-all duration-300 hover:scale-[1.06] hover:opacity-100
+                "
+              >
+                <div
+                  className="h-8 w-8 sm:h-9 sm:w-9 md:h-11 md:w-11 lg:h-12 lg:w-12"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #646973 0%, #bbccd7 100%)",
+                    WebkitMask:
+                      "url('/logo/Logo.svg') center / contain no-repeat",
+                    mask:
+                      "url('/logo/Logo.svg') center / contain no-repeat",
+                  }}
                 />
               </a>
             </div>
@@ -181,7 +195,7 @@ export default function ContactSection() {
           </FadeIn>
 
           <FadeIn delay={0.18} y={24}>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-1 sm:gap-2 md:ml-8 lg:ml-12 lg:mr-4">
               {CONTACT_LINKS.map((link, index) => (
                 <motion.a
                   key={link.label}
@@ -201,15 +215,15 @@ export default function ContactSection() {
                       justify-between
                       border-b
                       border-[#E8E9EB]/10
-                      py-2.5 sm:py-3
+                      px-1 py-2 sm:px-2 sm:py-2.5 md:px-3 md:py-3
                     "
                 >
                   <div className="flex items-center gap-4">
-                    <span className="text-[9px] font-bold uppercase tracking-[0.28em] text-[#E8E9EB]/25">
+                    <span className="shrink-0 text-[8px] font-bold uppercase tracking-[0.22em] text-[#E8E9EB]/25 sm:text-[9px] sm:tracking-[0.28em]">
                       0{index + 1}
                     </span>
 
-                    <span className="text-sm font-semibold uppercase tracking-[0.12em] text-[#E8E9EB]/65 transition-colors duration-300 group-hover:text-[#E8E9EB]">
+                    <span className="min-w-0 truncate text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-[#E8E9EB]/65 transition-colors duration-300 group-hover:text-[#E8E9EB] sm:text-xs sm:tracking-[0.1em] md:text-sm md:tracking-[0.12em]">
                       {link.label}
                     </span>
                   </div>
@@ -217,6 +231,7 @@ export default function ContactSection() {
                   <ArrowUpRight
                     size={16}
                     className="
+                        shrink-0
                         text-[#E8E9EB]/30
                         transition-all
                         duration-300

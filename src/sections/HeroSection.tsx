@@ -14,19 +14,17 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
       className="relative flex h-[100dvh] min-h-[640px] flex-col overflow-x-clip"
     >
       <button
+        type="button"
         onClick={() => onNavigate("home")}
+        aria-label="Back to home"
         className="
-          absolute
-          left-10
-          top-6
-          z-30
-          transition-transform
-          duration-300
-          hover:scale-110
+          absolute left-5 top-5 z-30 opacity-90
+          transition-all duration-300 hover:scale-[1.06] hover:opacity-100
+          sm:left-6 sm:top-6 md:left-10 md:top-5
         "
       >
         <div
-          className="w-14 h-14 lg:w-16 lg:h-16"
+          className="h-10 w-10 sm:h-11 sm:w-11 md:h-14 md:w-14 lg:h-16 lg:w-16"
           style={{
             background:
               "linear-gradient(180deg, #646973 0%, #bbccd7 100%)",
@@ -101,11 +99,10 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
               />
 
               <img
-                src="/models/avatar.png"
+                src="/models/avatar.webp"
                 alt="M.Đạt portrait"
                 className="
                   relative
-                  h-full
                   h-[45dvh]
                   max-h-[520px]
                   w-auto
@@ -327,7 +324,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
 
               {/* Avatar */}
               <img
-                src="/models/avatar.png"
+                src="/models/avatar.webp"
                 alt="M.Đạt portrait"
                 className="
                   relative

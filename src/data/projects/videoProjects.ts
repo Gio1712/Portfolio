@@ -16,7 +16,7 @@ export const VIDEO_CATEGORY: ProjectCategory = {
       role: "Video Editor",
       tools: ["Adobe Premiere Pro", "Adobe After Effects"],
 
-      thumbnail: "/projects/video/Screenshot 2026-07-27 190730.png",
+      thumbnail: "/projects/video/Screenshot 2026-07-27 190730.webp",
 
       description:
         "A promotional video edit combining clear storytelling, rhythmic pacing, motion graphics and polished visual transitions.",
@@ -24,7 +24,7 @@ export const VIDEO_CATEGORY: ProjectCategory = {
       groups: [],
 
       video: {
-        thumbnail: "/projects/video/Screenshot 2026-07-27 190730.png",
+        thumbnail: "/projects/video/Screenshot 2026-07-27 190730.webp",
         src:
           "https://pub-063334e5ec6a49e8ac1371f715489bb1.r2.dev/2nd-anniversary_web.mp4",
       },

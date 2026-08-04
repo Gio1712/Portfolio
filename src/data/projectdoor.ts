@@ -15,7 +15,7 @@ export const PROJECTS: ProjectItem[] = [
     titleLines: ["Brand", "Identity"],
     category: "Creative Direction",
     year: "2025",
-    image: "/projects/brandidentity/thumbcamdotietkiem.png",
+    image: "/projects/brandidentity/thumbcamdotietkiem.webp",
     categoryId: "brand-identity",
   },
   {
@@ -24,7 +24,7 @@ export const PROJECTS: ProjectItem[] = [
     titleLines: ["Poster", "Design"],
     category: "Visual Communication",
     year: "2025",
-    image: "/projects/poster/stealth-in-motion/portrait.png",
+    image: "/projects/poster/stealth-in-motion/portrait.webp",
     categoryId: "poster-design",
   },
   {
@@ -33,7 +33,7 @@ export const PROJECTS: ProjectItem[] = [
     titleLines: ["Motion", "Graphics"],
     category: "Animation",
     year: "2025",
-    image: "/projects/motiongraphic/source/portrait.png",
+    image: "/projects/motiongraphic/source/portrait.webp",
     categoryId: "motion-graphics",
   },
   {
@@ -42,7 +42,7 @@ export const PROJECTS: ProjectItem[] = [
     titleLines: ["Video", "Editing"],
     category: "Post Production",
     year: "2025",
-    image: "/projects/video/Screenshot 2026-07-27 190730.png",
+    image: "/projects/video/Screenshot 2026-07-27 190730.webp",
     categoryId: "video-editing",
   },
 ];

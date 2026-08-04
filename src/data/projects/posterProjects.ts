@@ -14,7 +14,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/stealth-in-motion/square.png",
+      thumbnail: "/projects/poster/stealth-in-motion/square.webp",
       description:
         "A visual campaign positioning rotating residential IPs as a stealth-focused solution for uninterrupted data collection.",
       groups: [
@@ -24,7 +24,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/stealth-in-motion/square.png",
+              src: "/projects/poster/stealth-in-motion/square.webp",
               alt: "Stealth in Motion — Square",
             },
           ],
@@ -35,7 +35,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/stealth-in-motion/portrait.png",
+              src: "/projects/poster/stealth-in-motion/portrait.webp",
               alt: "Stealth in Motion — Portrait",
             },
           ],
@@ -50,7 +50,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/crawl-heavy-sites/square.png",
+      thumbnail: "/projects/poster/crawl-heavy-sites/square.webp",
       description:
         "A performance-led proxy campaign emphasizing speed, reliability and scalable crawling for data-intensive websites.",
       groups: [
@@ -60,7 +60,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/crawl-heavy-sites/square.png",
+              src: "/projects/poster/crawl-heavy-sites/square.webp",
               alt: "Crawl Heavy Sites — Square",
             },
           ],
@@ -71,7 +71,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/crawl-heavy-sites/portrait.png",
+              src: "/projects/poster/crawl-heavy-sites/portrait.webp",
               alt: "Crawl Heavy Sites — Portrait",
             },
           ],
@@ -82,7 +82,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/crawl-heavy-sites/landscape.png",
+              src: "/projects/poster/crawl-heavy-sites/landscape.webp",
               alt: "Crawl Heavy Sites — Landscape",
             },
           ],
@@ -97,7 +97,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/year-end-survey/square.png",
+      thumbnail: "/projects/poster/year-end-survey/square.webp",
       description:
         "An interactive year-end survey campaign designed to increase participation through a clean, futuristic interface.",
       groups: [
@@ -107,7 +107,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/year-end-survey/square.png",
+              src: "/projects/poster/year-end-survey/square.webp",
               alt: "Year-End Survey — Square",
             },
           ],
@@ -118,7 +118,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/year-end-survey/portrait.png",
+              src: "/projects/poster/year-end-survey/portrait.webp",
               alt: "Year-End Survey — Portrait",
             },
           ],
@@ -133,7 +133,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/white-label-proxy/square.jpg",
+      thumbnail: "/projects/poster/white-label-proxy/square.webp",
       description:
         "A reseller-focused campaign presenting white-label proxy services as a credible and scalable business opportunity.",
       groups: [
@@ -143,7 +143,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/white-label-proxy/square.jpg",
+              src: "/projects/poster/white-label-proxy/square.webp",
               alt: "White Label Proxy — Square",
             },
           ],
@@ -154,7 +154,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/white-label-proxy/portrait.jpg",
+              src: "/projects/poster/white-label-proxy/portrait.webp",
               alt: "White Label Proxy — Portrait",
             },
           ],
@@ -169,7 +169,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/lunar-deal-reseller/square.png",
+      thumbnail: "/projects/poster/lunar-deal-reseller/square.webp",
       description:
         "A Lunar New Year reseller promotion combining direct pricing communication with warm seasonal visual cues.",
       groups: [
@@ -179,7 +179,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/lunar-deal-reseller/square.png",
+              src: "/projects/poster/lunar-deal-reseller/square.webp",
               alt: "Lunar Deal for Resellers — Square",
             },
           ],
@@ -190,7 +190,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/lunar-deal-reseller/portrait.png",
+              src: "/projects/poster/lunar-deal-reseller/portrait.webp",
               alt: "Lunar Deal for Resellers — Portrait",
             },
           ],
@@ -205,7 +205,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/pay-with-crypto/square.png",
+      thumbnail: "/projects/poster/pay-with-crypto/square.webp",
       description:
         "A crypto-payment incentive campaign built around a bold five-percent bonus and a high-contrast fintech aesthetic.",
       groups: [
@@ -215,7 +215,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/pay-with-crypto/square.png",
+              src: "/projects/poster/pay-with-crypto/square.webp",
               alt: "Pay with Crypto — Square",
             },
           ],
@@ -226,7 +226,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/pay-with-crypto/portrait.png",
+              src: "/projects/poster/pay-with-crypto/portrait.webp",
               alt: "Pay with Crypto — Portrait",
             },
           ],
@@ -241,7 +241,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/lunar-new-year-proxy/square.png",
+      thumbnail: "/projects/poster/lunar-new-year-proxy/square.webp",
       description:
         "A premium Lunar New Year visual series connecting proxy packages with luck, fortune and full performance.",
       groups: [
@@ -251,7 +251,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/lunar-new-year-proxy/square.png",
+              src: "/projects/poster/lunar-new-year-proxy/square.webp",
               alt: "Lunar New Year Proxy — Square",
             },
           ],
@@ -262,7 +262,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/lunar-new-year-proxy/portrait.png",
+              src: "/projects/poster/lunar-new-year-proxy/portrait.webp",
               alt: "Lunar New Year Proxy — Portrait",
             },
           ],
@@ -277,7 +277,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/shop-global/square.png",
+      thumbnail: "/projects/poster/shop-global/square.webp",
       description:
         "A global-shopping campaign using a connected-world visual system to communicate international access and reach.",
       groups: [
@@ -287,7 +287,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/shop-global/square.png",
+              src: "/projects/poster/shop-global/square.webp",
               alt: "Shop Global — Square",
             },
           ],
@@ -298,7 +298,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/shop-global/portrait.png",
+              src: "/projects/poster/shop-global/portrait.webp",
               alt: "Shop Global — Portrait",
             },
           ],
@@ -313,7 +313,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/black-friday-bonus-wheel/main.png",
+      thumbnail: "/projects/poster/black-friday-bonus-wheel/main.webp",
       description:
         "A gamified Black Friday campaign turning promotional rewards into a bright spin-and-win experience.",
       groups: [
@@ -323,7 +323,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/black-friday-bonus-wheel/main.png",
+              src: "/projects/poster/black-friday-bonus-wheel/main.webp",
               alt: "Black Friday Bonus Wheel — Main Visual",
             },
           ],
@@ -338,7 +338,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/black-friday-madness/main.png",
+      thumbnail: "/projects/poster/black-friday-madness/main.webp",
       description:
         "A high-energy Black Friday promotion built around large discount messaging, gifts and urgency.",
       groups: [
@@ -348,7 +348,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/black-friday-madness/main.png",
+              src: "/projects/poster/black-friday-madness/main.webp",
               alt: "Black Friday Madness — Main Visual",
             },
           ],
@@ -363,7 +363,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/proxy-email-campaign/setup-one-minute.jpg",
+      thumbnail: "/projects/poster/proxy-email-campaign/setup-one-minute.webp",
       description:
         "A set of compact email graphics communicating speed, performance, setup simplicity and purchase incentives.",
       groups: [
@@ -373,7 +373,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/proxy-email-campaign/setup-one-minute.jpg",
+              src: "/projects/poster/proxy-email-campaign/setup-one-minute.webp",
               alt: "Proxy Email Campaign — Set Up in One Minute",
             },
           ],
@@ -384,7 +384,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/proxy-email-campaign/boost-success.jpg",
+              src: "/projects/poster/proxy-email-campaign/boost-success.webp",
               alt: "Proxy Email Campaign — Boost Success",
             },
           ],
@@ -395,7 +395,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/proxy-email-campaign/maximize-performance.jpg",
+              src: "/projects/poster/proxy-email-campaign/maximize-performance.webp",
               alt: "Proxy Email Campaign — Maximize Performance",
             },
           ],
@@ -406,7 +406,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/proxy-email-campaign/extra-ips.jpg",
+              src: "/projects/poster/proxy-email-campaign/extra-ips.webp",
               alt: "Proxy Email Campaign — Extra IPs",
             },
           ],
@@ -417,7 +417,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/proxy-email-campaign/peak-performance.jpg",
+              src: "/projects/poster/proxy-email-campaign/peak-performance.webp",
               alt: "Proxy Email Campaign — Peak Performance",
             },
           ],
@@ -432,7 +432,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/proxy-performance-journey/main.jpg",
+      thumbnail: "/projects/poster/proxy-performance-journey/main.webp",
       description:
         "An abstract performance journey visual translating data movement and network progression into a clean editorial composition.",
       groups: [
@@ -442,7 +442,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/proxy-performance-journey/main.jpg",
+              src: "/projects/poster/proxy-performance-journey/main.webp",
               alt: "Proxy Performance Journey — Main Visual",
             },
           ],
@@ -457,7 +457,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "BeeProxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/rocket-through-barriers/square.jpg",
+      thumbnail: "/projects/poster/rocket-through-barriers/square.webp",
       description:
         "A launch-themed campaign presenting proxy infrastructure as a way to break through scraping barriers.",
       groups: [
@@ -467,7 +467,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/rocket-through-barriers/square.jpg",
+              src: "/projects/poster/rocket-through-barriers/square.webp",
               alt: "Rocket Through Barriers — Square",
             },
           ],
@@ -478,7 +478,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/rocket-through-barriers/portrait.jpg",
+              src: "/projects/poster/rocket-through-barriers/portrait.webp",
               alt: "Rocket Through Barriers — Portrait",
             },
           ],
@@ -493,7 +493,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "BeeProxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/perfect-proxy-match/square.jpg",
+      thumbnail: "/projects/poster/perfect-proxy-match/square.webp",
       description:
         "A playful product-matching campaign using astronaut imagery to compare proxy-plan choices.",
       groups: [
@@ -503,7 +503,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/perfect-proxy-match/square.jpg",
+              src: "/projects/poster/perfect-proxy-match/square.webp",
               alt: "The Perfect Proxy Match — Square",
             },
           ],
@@ -514,7 +514,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/perfect-proxy-match/portrait.jpg",
+              src: "/projects/poster/perfect-proxy-match/portrait.webp",
               alt: "The Perfect Proxy Match — Portrait",
             },
           ],
@@ -529,7 +529,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "BeeProxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/born-later-built-better/square.jpg",
+      thumbnail: "/projects/poster/born-later-built-better/square.webp",
       description:
         "A bold launch statement positioning BeeProxy as a newer platform built with stronger technology and clearer value.",
       groups: [
@@ -539,7 +539,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/born-later-built-better/square.jpg",
+              src: "/projects/poster/born-later-built-better/square.webp",
               alt: "Born Later, Built Better — Square",
             },
           ],
@@ -550,7 +550,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/born-later-built-better/portrait.jpg",
+              src: "/projects/poster/born-later-built-better/portrait.webp",
               alt: "Born Later, Built Better — Portrait",
             },
           ],
@@ -565,7 +565,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "BeeProxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/take-full-control/square.png",
+      thumbnail: "/projects/poster/take-full-control/square.webp",
       description:
         "A control-focused campaign communicating flexible rules and global proxy management.",
       groups: [
@@ -575,7 +575,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/take-full-control/square.png",
+              src: "/projects/poster/take-full-control/square.webp",
               alt: "Take Full Control — Square",
             },
           ],
@@ -586,7 +586,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/take-full-control/portrait.png",
+              src: "/projects/poster/take-full-control/portrait.webp",
               alt: "Take Full Control — Portrait",
             },
           ],
@@ -601,7 +601,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "BeeProxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/real-speed-real-results/main.png",
+      thumbnail: "/projects/poster/real-speed-real-results/main.webp",
       description:
         "A technology visual emphasizing measurable speed and reliable outcomes.",
       groups: [
@@ -611,7 +611,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/real-speed-real-results/main.png",
+              src: "/projects/poster/real-speed-real-results/main.webp",
               alt: "Real Speed, Real Results — Main Visual",
             },
           ],
@@ -626,7 +626,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "BeeProxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/more-you-pour-more-you-score/main.png",
+      thumbnail: "/projects/poster/more-you-pour-more-you-score/main.webp",
       description:
         "A tiered reward visual translating higher usage into stronger value through a rocket-launch metaphor.",
       groups: [
@@ -636,7 +636,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/more-you-pour-more-you-score/main.png",
+              src: "/projects/poster/more-you-pour-more-you-score/main.webp",
               alt: "More You Pour, More You Score — Main Visual",
             },
           ],
@@ -651,7 +651,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "BeeProxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/welcome-to-9proxy/main.png",
+      thumbnail: "/projects/poster/welcome-to-9proxy/main.webp",
       description:
         "An onboarding campaign guiding users from BeeProxy plans into the 9Proxy platform.",
       groups: [
@@ -661,7 +661,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/welcome-to-9proxy/main.png",
+              src: "/projects/poster/welcome-to-9proxy/main.webp",
               alt: "Welcome to 9Proxy — Main Visual",
             },
           ],
@@ -676,7 +676,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "BeeProxy × 9Proxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/spin-and-win-proxy/main.png",
+      thumbnail: "/projects/poster/spin-and-win-proxy/main.webp",
       description:
         "A co-branded gamified reward campaign combining bonus data, checkout incentives and a prize wheel.",
       groups: [
@@ -686,7 +686,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/spin-and-win-proxy/main.png",
+              src: "/projects/poster/spin-and-win-proxy/main.webp",
               alt: "Spin and Win — Main Visual",
             },
           ],
@@ -701,7 +701,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "BeeProxy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/beeproxy-christmas/main.png",
+      thumbnail: "/projects/poster/beeproxy-christmas/main.webp",
       description:
         "A festive Christmas greeting that adapts the brand’s rocket motif into a winter holiday scene.",
       groups: [
@@ -711,7 +711,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/beeproxy-christmas/main.png",
+              src: "/projects/poster/beeproxy-christmas/main.webp",
               alt: "Merry Christmas — Main Visual",
             },
           ],
@@ -726,7 +726,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "Personal Project",
       role: "Graphic Designer",
       tools: ["Photoshop"],
-      thumbnail: "/projects/poster/tech-future/main.png",
+      thumbnail: "/projects/poster/tech-future/main.webp",
       description:
         "A futuristic technology key visual combining wearable styling, interface elements and a cool digital color system.",
       groups: [
@@ -736,7 +736,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/tech-future/main.png",
+              src: "/projects/poster/tech-future/main.webp",
               alt: "Create the Future — Main Visual",
             },
           ],
@@ -751,7 +751,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "Personal Project",
       role: "Graphic Designer",
       tools: ["Photoshop"],
-      thumbnail: "/projects/poster/back-to-school-tech/main.png",
+      thumbnail: "/projects/poster/back-to-school-tech/main.webp",
       description:
         "A back-to-school technology campaign built around student energy, product variety and bright seasonal messaging.",
       groups: [
@@ -761,7 +761,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/back-to-school-tech/main.png",
+              src: "/projects/poster/back-to-school-tech/main.webp",
               alt: "Back to School Tech — Main Visual",
             },
           ],
@@ -776,7 +776,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "Personal Project",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/express-yourself-editorial/express.png",
+      thumbnail: "/projects/poster/express-yourself-editorial/express.webp",
       description:
         "A monochrome fashion editorial series focused on confidence, individuality and expressive typography.",
       groups: [
@@ -786,7 +786,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/express-yourself-editorial/express.png",
+              src: "/projects/poster/express-yourself-editorial/express.webp",
               alt: "Express Yourself — Express",
             },
           ],
@@ -797,7 +797,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/express-yourself-editorial/create.png",
+              src: "/projects/poster/express-yourself-editorial/create.webp",
               alt: "Express Yourself — Create",
             },
           ],
@@ -808,7 +808,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/express-yourself-editorial/own.png",
+              src: "/projects/poster/express-yourself-editorial/own.webp",
               alt: "Express Yourself — Own",
             },
           ],
@@ -823,7 +823,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
       client: "AIDI Academy",
       role: "Graphic Designer",
       tools: ["Photoshop", "Illustrator"],
-      thumbnail: "/projects/poster/aidi-ai-learning-campaign/ai-mentor.png",
+      thumbnail: "/projects/poster/aidi-ai-learning-campaign/ai-mentor.webp",
       description:
         "A digital education campaign introducing AI-assisted learning, personalized study paths and distance-learning support.",
       groups: [
@@ -833,7 +833,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/aidi-ai-learning-campaign/ai-mentor.png",
+              src: "/projects/poster/aidi-ai-learning-campaign/ai-mentor.webp",
               alt: "AI Learning Campaign — AI Mentor",
             },
           ],
@@ -844,7 +844,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/aidi-ai-learning-campaign/closed-beta.png",
+              src: "/projects/poster/aidi-ai-learning-campaign/closed-beta.webp",
               alt: "AI Learning Campaign — Closed Beta",
             },
           ],
@@ -855,7 +855,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/aidi-ai-learning-campaign/study-abroad.png",
+              src: "/projects/poster/aidi-ai-learning-campaign/study-abroad.webp",
               alt: "AI Learning Campaign — Study Abroad",
             },
           ],
@@ -866,7 +866,7 @@ export const POSTER_CATEGORY: ProjectCategory = {
           layout: "single",
           images: [
             {
-              src: "/projects/poster/aidi-ai-learning-campaign/personalized-learning.png",
+              src: "/projects/poster/aidi-ai-learning-campaign/personalized-learning.webp",
               alt: "AI Learning Campaign — Personalized Learning",
             },
           ],
