@@ -1,5 +1,4 @@
 # Ignore source videos
-public/projects/motiongraphic/source/*.mp4
 public/projects/video/*.mp4
 
 # Ignore build
