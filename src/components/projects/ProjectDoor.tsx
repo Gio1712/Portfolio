@@ -83,9 +83,6 @@ export default function ProjectDoor({
         draggable={false}
         animate={{
           scale: isActive ? 1.03 : 1.08,
-          filter: isActive
-            ? "blur(1px) saturate(1)"
-            : "blur(2px) saturate(0.95)",
           opacity: isActive ? 0.96 : 0.9,
         }}
         transition={{
@@ -99,6 +96,12 @@ export default function ProjectDoor({
           w-full
           select-none
           object-cover
+          blur-[1px]
+          saturate-100
+          group-hover:blur-[1px]
+          lg:blur-[6px]
+          lg:saturate-[0.85]
+          lg:group-hover:blur-[3px]
           will-change-transform
         "
       />
@@ -107,23 +110,25 @@ export default function ProjectDoor({
       <motion.div
         animate={{
           backgroundColor: isActive
-            ? "rgba(7,8,11,0.10)"
-            : "rgba(7,8,11,0.18)",
-          backdropFilter: isActive
-            ? "blur(1px)"
-            : "blur(2px)",
+            ? "rgba(7,8,11,0.12)"
+            : "rgba(7,8,11,0.2)",
         }}
         transition={{
           duration: 0.55,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="absolute inset-0"
+        className="
+          absolute
+          inset-0
+          backdrop-blur-[1px]
+          lg:backdrop-blur-[6px]
+        "
       />
 
       {/* Dark gradients */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/45" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/5" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/15 via-transparent to-black/10" />
 
       {/* HUD grid */}
       <div
