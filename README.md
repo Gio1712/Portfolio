@@ -1,4 +1,4 @@
-# Jack — 3D Creator Portfolio
+# Dat -- Graphic Designer
 
 Landing page built with React, TypeScript, Tailwind CSS, Framer Motion, and Lucide React.
 
