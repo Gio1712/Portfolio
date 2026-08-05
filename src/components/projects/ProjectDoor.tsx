@@ -38,7 +38,7 @@ export default function ProjectDoor({
       animate={{
         flex: isActive ? 2.35 : 1,
         opacity: isDimmed ? 0.48 : 1,
-        y: isActive ? -6 : 0,
+        y: isActive ? -2 : 0,
       }}
       transition={{
         flex: {
@@ -82,11 +82,11 @@ export default function ProjectDoor({
         alt={project.title}
         draggable={false}
         animate={{
-          scale: isActive ? 1.05 : 1.2,
+          scale: isActive ? 1.03 : 1.08,
           filter: isActive
-            ? "blur(4px) saturate(0.9)"
-            : "blur(14px) saturate(0.65)",
-          opacity: isActive ? 0.78 : 0.42,
+            ? "blur(1px) saturate(1)"
+            : "blur(2px) saturate(0.95)",
+          opacity: isActive ? 0.96 : 0.9,
         }}
         transition={{
           duration: 0.7,
@@ -107,9 +107,11 @@ export default function ProjectDoor({
       <motion.div
         animate={{
           backgroundColor: isActive
-            ? "rgba(7, 8, 11, 0.34)"
-            : "rgba(7, 8, 11, 0.62)",
-          backdropFilter: isActive ? "blur(5px)" : "blur(15px)",
+            ? "rgba(7,8,11,0.10)"
+            : "rgba(7,8,11,0.18)",
+          backdropFilter: isActive
+            ? "blur(1px)"
+            : "blur(2px)",
         }}
         transition={{
           duration: 0.55,
@@ -119,9 +121,9 @@ export default function ProjectDoor({
       />
 
       {/* Dark gradients */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/5" />
 
       {/* HUD grid */}
       <div
@@ -216,7 +218,12 @@ export default function ProjectDoor({
       {/* =========================
           CONTENT
       ========================= */}
-      <div className="relative z-10 flex h-full min-h-[620px] flex-col justify-between p-6 md:p-7 lg:p-8">
+      <div className="
+      relative z-10
+      flex
+      min-h-[480px]
+      md:min-h-[620px]
+      flex-col justify-between p-6 md:p-7 lg:p-8">
         {/* Header */}
         <div>
           <div className="flex items-center gap-3">
@@ -272,7 +279,7 @@ export default function ProjectDoor({
               duration: 0.6,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative flex size-12 items-center justify-center"
+            className="relative flex size-10 md:size-12 items-center justify-center"
           >
             <div className="absolute size-11 rounded-full border border-[#E8E9EB]/15" />
 
