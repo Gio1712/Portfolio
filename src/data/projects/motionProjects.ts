@@ -197,7 +197,7 @@ export const MOTION_CATEGORY: ProjectCategory = {
       thumbnail:
         "/projects/motion/customize-proxy-settings-to-prevent-repetition/cover.webp",
       description:
-        "The vimeo video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
+        "The Youtube video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
       groups: [],
       motion: {
         preview:
@@ -216,7 +216,7 @@ export const MOTION_CATEGORY: ProjectCategory = {
       tools: ["Adobe After Effects", "Adobe Premiere Pro"],
       thumbnail: "/projects/motion/vivaldi-settings/cover.webp",
       description:
-        "The vimeo video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
+        "The Youtube video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
       groups: [],
       motion: {
         preview: "/projects/motiongraphic/preview/vivaldi-settings.mp4",
@@ -235,7 +235,7 @@ export const MOTION_CATEGORY: ProjectCategory = {
       thumbnail:
         "/projects/motion/account-experiencing-issues-9Proxy/cover.webp",
       description:
-        "The vimeo video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
+        "The Youtube video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
       groups: [],
       motion: {
         preview:
@@ -254,7 +254,7 @@ export const MOTION_CATEGORY: ProjectCategory = {
       tools: ["Adobe After Effects", "Adobe Premiere Pro"],
       thumbnail: "/projects/motion/google-settings/cover.webp",
       description:
-        "The vimeo video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
+        "The Youtube video series by 9Proxy guides users on how to install the 9Proxy application on their devices. The motion graphics in the videos are designed to be visually engaging and informative, providing step-by-step instructions for users to follow along with ease.",
       groups: [],
       motion: {
         preview: "/projects/motiongraphic/preview/google-settings.mp4",
