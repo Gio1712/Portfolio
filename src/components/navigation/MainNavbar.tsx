@@ -145,7 +145,7 @@ export default function MainNavbar({ onNavigate }: MainNavbarProps) {
       <div className="flex flex-1 justify-end">
         <button
           type="button"
-          onClick={() => window.open("/CV/buiminhdatCV.pdf", "_blank")}
+          onClick={() => window.open(`${window.location.origin}/CV/buiminhdatCV.pdf`, "_blank")}
           className="
       group
       relative
