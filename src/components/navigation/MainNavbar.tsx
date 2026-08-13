@@ -143,9 +143,10 @@ export default function MainNavbar({ onNavigate }: MainNavbarProps) {
 
       {/* CV */}
       <div className="flex flex-1 justify-end">
-        <button
-          type="button"
-          onClick={() => window.open(`${window.location.origin}/CV/buiminhdatCV.pdf`, "_blank")}
+        <a
+          href="/CV/buiminhdatCV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="
       group
       relative
@@ -227,7 +228,7 @@ export default function MainNavbar({ onNavigate }: MainNavbarProps) {
               <span className="absolute size-5 rounded-full border border-[#E8E9EB]/20 transition-all duration-300 group-hover:border-[#E8E9EB]/40" />
             </span>
           </span>
-        </button>
+        </a>
       </div>
     </motion.nav>
   );
