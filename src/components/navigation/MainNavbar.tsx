@@ -141,37 +141,92 @@ export default function MainNavbar({ onNavigate }: MainNavbarProps) {
         })}
       </div>
 
-      {/* CV bên phải */}
+      {/* CV */}
       <div className="flex flex-1 justify-end">
         <button
           type="button"
           onClick={() => window.open("/CV/buiminhdatCV.pdf", "_blank")}
           className="
       group
+      relative
       flex
       items-center
-      gap-1
-      text-sm
-      font-medium
+      gap-3
+      overflow-hidden
+      rounded-full
+      border
+      border-[#E8E9EB]/20
+      bg-[#E8E9EB]/[0.035]
+      px-5
+      py-2.5
+      text-xs
+      font-bold
       uppercase
-      tracking-wider
+      tracking-[0.16em]
       text-[#E8E9EB]
-      transition-opacity
+      backdrop-blur-md
+      transition-all
       duration-300
-      hover:opacity-65
-      lg:text-[1.15rem]
+      hover:border-[#E8E9EB]/55
+      hover:bg-[#E8E9EB]/[0.08]
+      hover:shadow-[0_0_24px_rgba(232,233,235,0.08)]
+      active:scale-[0.97]
+      lg:px-6
+      lg:py-3
+      lg:text-sm
     "
         >
-          CV
-          <ArrowUpRight
-            size={17}
+          <span
             className="
+        pointer-events-none
+        absolute
+        inset-y-0
+        -left-1/2
+        w-1/2
+        rotate-12
+        bg-gradient-to-r
+        from-transparent
+        via-white/[0.09]
+        to-transparent
         transition-transform
-        duration-300
-        group-hover:translate-x-0.5
-        group-hover:-translate-y-0.5
+        duration-700
+        group-hover:translate-x-[280%]
       "
           />
+
+          <span className="relative z-10">
+            Open CV
+          </span>
+
+          <span
+            className="
+        relative
+        z-10
+        flex
+        size-6
+        items-center
+        justify-center
+      "
+          >
+            <span
+              className="
+          relative
+          flex
+          size-2.5
+          items-center
+          justify-center
+          rounded-full
+          bg-[#E8E9EB]
+          shadow-[0_0_10px_rgba(232,233,235,0.55)]
+          transition-all
+          duration-300
+          group-hover:scale-125
+          group-hover:shadow-[0_0_16px_rgba(232,233,235,0.8)]
+        "
+            >
+              <span className="absolute size-5 rounded-full border border-[#E8E9EB]/20 transition-all duration-300 group-hover:border-[#E8E9EB]/40" />
+            </span>
+          </span>
         </button>
       </div>
     </motion.nav>
