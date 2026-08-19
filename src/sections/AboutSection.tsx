@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AboutModelStage from "../components/model/AboutModelStage";
 
 const BIO_TEXT =
-  "Hi, I'm Dat — a Graphic Designer specializing in poster design, branding and motion graphics. With nearly two years of professional experience, I've developed a workflow that combines creative thinking with AI-assisted design to accelerate production without compromising quality. I believe great design is more than visual appeal—it communicates ideas, tells stories and creates meaningful experiences. Every project is an opportunity to build something purposeful, memorable and visually engaging.";
+  "Hi, I'm Dat — a Graphic Designer specializing in poster design, branding and motion graphics. With 1.5 years of professional experience, I've developed a workflow that combines creative thinking with AI-assisted design to accelerate production without compromising quality. I believe great design is more than visual appeal—it communicates ideas, tells stories and creates meaningful experiences. Every project is an opportunity to build something purposeful, memorable and visually engaging.";
 
 const EXPERIENCE = [
   {
@@ -416,15 +416,15 @@ export default function AboutSection() {
                 >
                   <span
                     className={`absolute size-7 rounded-full border border-[#E8E9EB]/45 transition-all duration-300 lg:size-8 ${isActive
-                        ? "scale-100 opacity-70"
-                        : "scale-75 opacity-20"
+                      ? "scale-100 opacity-70"
+                      : "scale-75 opacity-20"
                       }`}
                   />
 
                   <span
                     className={`relative rounded-full bg-[#E8E9EB] transition-all duration-300 ${isActive
-                        ? "size-2.5 opacity-100"
-                        : "size-1.5 opacity-50"
+                      ? "size-2.5 opacity-100"
+                      : "size-1.5 opacity-50"
                       }`}
                   />
                 </div>
